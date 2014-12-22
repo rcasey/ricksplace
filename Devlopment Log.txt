@@ -1,0 +1,13 @@
+Time Log of development of Rick's Place
+
+Dec 2014 -- started development in earnest, selecting Refinery CMS
+
+dec 17 -- switched database from MySQL to Postgres, after discovering that this is the
+    preferred database at Heroku (and because most of open source community seems to
+    moving away from MySQL and towards Postgres, because of how Oracle is mucking up MySQL)
+    Installing Postgres w/ Refinery is tedious...see bookmark link under Resources.
+    
+    Switching the database seemed easier that dumping the data out of the MySQL version, then
+    importing into the Postgres version, given the different data types between the two (even
+    just on text and string types...)
+    

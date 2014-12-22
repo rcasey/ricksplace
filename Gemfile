@@ -6,7 +6,8 @@ gem 'rails', '3.2.21'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
-  gem 'sqlite3'
+  #gem 'sqlite3'
+  gem 'pg'
 end
 
 
@@ -44,7 +45,7 @@ gem 'refinerycms', '~> 2.1.0'
 
 # Optionally, specify additional Refinery CMS Extensions here:
 gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
-#  gem 'refinerycms-blog', '~> 2.1.0'
+gem 'refinerycms-blog', '~> 2.1.0'
 #  gem 'refinerycms-inquiries', '~> 2.1.0'
 #  gem 'refinerycms-search', '~> 2.1.0'
 #  gem 'refinerycms-page-images', '~> 2.1.0'
@@ -55,5 +56,3 @@ gem 'heroku'
 # Fog allows you to use S3 assets (added for Heroku)
 gem 'fog'
 
-# Postgres support (added for Heroku)
-gem 'pg'

@@ -1,0 +1,59 @@
+Development Notes
+
+login: rick
+password: rick
+
+To reset a password:
+
+    -- inside the rails console, you can enter
+    `Refinery::User.find_by_email('your_...@gmail.com').tap {|u| u.password = 'new password' }.save`.
+    
+Editing the Homepage:
+    - start rails: cd /Users/rickcasey/Projects/Programming/Website Projects/ricksplace
+    - see Refinery dashboard, top page, 'Rick's Place'
+    - inside Refinery, the homepage has a separate view at app/views/refinery/pages/home.html.erb
+    
+To force login:
+    - URL: localhost:3000/refinery (once logged in, will see web editor)
+    
+Scripts that create other setup items:
+ 
+    - to create role for users in Postgres DB:
+    
+    CREATE ROLE site_user;
+    CREATE ROLE site_admin;
+    CREATE USER rick ROLE site_admin;
+    
+    - commands to create heroku compatible Refinery app:
+    
+    refinerycms ricksplace --heroku
+    createuser -P -d -e postgres
+    createuser -P -d -e ricksplace
+    ...then edit the database.yml file with the user login/password ricksplace
+    
+    rake db:create
+    rake db:migrate
+    
+    ...this finally worked.
+    
+changing of some basic default settings:
+    - some of this is done by editing the controllers or views.
+    to change the website name:
+    edit config/initializers/refinery/core.rb, see config.site_name =... (requires restart)
+    
+to override the default header:
+    rake refinery:override view=refinery/_header
+    
+to set the home page:
+    docs say to run: rake db:seed
+    which resulted in this message:
+        I18n.enforce_available_locales will default to true in the future.
+        If you really want to skip validation of your locale you can set
+        I18n.enforce_available_locales = false to avoid this message.
+    Don't know about above message, but this did the trick: now the website appears...
+    
+    
+    
+    
+    
+    
