@@ -11,3 +11,21 @@ dec 17 -- switched database from MySQL to Postgres, after discovering that this 
     importing into the Postgres version, given the different data types between the two (even
     just on text and string types...)
     
+dec 22 -- got postgres working (need to follow blog installation steps exactly)
+    Having trouble with styling and setting home page to resemble what I had done before;
+    am following the Refinery Guides steps...up to 5.5, but still looks like crap...and is not
+    displaying the correct home page.
+    
+dec 24 -- added this refinery extension: Events History, which I intend to start using
+    to document events related to Front Range Fracking. 
+
+    This was done by modifying the example in section 6.2 of the Refinery Guides, which
+    looks like: 
+    
+        rails generate refinery:engine event title:string date:datetime photo:image blurb:text
+    
+    which I modified slightly to:
+    
+        rails generate refinery:engine event title:string date:datetime photo:image description:text
+
+    This generated a new menu tab, Events.    
