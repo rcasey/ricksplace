@@ -22,7 +22,9 @@ module Refinery
     protected
 
       def find_all_events
-        @events = Event.order('position ASC')
+        # (rc, 25-dec-2014) Changed to sort by date
+        #@events = Event.order('position ASC')
+        @events = Event.order("date DESC")
       end
 
       def find_page

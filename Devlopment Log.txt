@@ -28,4 +28,9 @@ dec 24 -- added this refinery extension: Events History, which I intend to start
     
         rails generate refinery:engine event title:string date:datetime photo:image description:text
 
-    This generated a new menu tab, Events.    
+    This generated a new menu tab, Events.
+
+dec 25 -- Want to improve positioning of the body, sidebar, footer and header....
+    Tried starting with the footer:
+        rake refinery:override view=refinery/_footer
+    This created app/views/refinery/_footer.html.erb 
