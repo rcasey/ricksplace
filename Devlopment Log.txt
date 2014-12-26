@@ -33,4 +33,14 @@ dec 24 -- added this refinery extension: Events History, which I intend to start
 dec 25 -- Want to improve positioning of the body, sidebar, footer and header....
     Tried starting with the footer:
         rake refinery:override view=refinery/_footer
-    This created app/views/refinery/_footer.html.erb 
+    This created app/views/refinery/_footer.html.erb
+    
+dec 26 -- was having trouble deploying to heroku for first time; getting error
+    "Rakefile not found"...after bit of stumbling searching online, discover this
+    heroku help page: vcenter.heroku.com/articles/pre-provision-database
+    which recommended this:
+    heroku addons:add heroku-postgresql
+    
+    which then got the deploy to work.
+    
+    

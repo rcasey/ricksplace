@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.21'
+ruby '1.9.3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -49,7 +50,8 @@ gem 'refinerycms-blog', '~> 2.1.0'
 #  gem 'refinerycms-page-images', '~> 2.1.0'
 
 # The Heroku gem allows you to interface with Heroku's API
-gem 'heroku'
+# (rc, 26-dec-2014) Heroku says this gem has been deprecated, replaced by Toolbelt
+#gem 'heroku'
 
 # Fog allows you to use S3 assets (added for Heroku)
 gem 'fog'
