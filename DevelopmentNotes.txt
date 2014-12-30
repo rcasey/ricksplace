@@ -3,6 +3,10 @@ Development Notes
 login: rick
 password: rick
 
+Heroku deployment:
+    -- before deploying, do:
+        rake assets:precompile
+
 To reset a password:
 
     -- inside the rails console, you can enter

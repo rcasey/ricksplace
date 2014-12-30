@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.21'
-ruby '1.9.3'
+ruby '2.1.2'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-
+# Use Postgres for all environments
 gem 'pg'
 
 
@@ -58,3 +58,8 @@ gem 'fog'
 
 
 gem 'refinerycms-events', :path => 'vendor/extensions'
+
+# Per RailsApps Project suggestion, use this webserver for production:
+group :production do
+  gem 'thin'
+end
